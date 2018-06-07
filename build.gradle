@@ -1,0 +1,22 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.2.41"
+    id "application"
+}
+
+repositories {
+    maven { url "http://build.sofi.com:8081/artifactory/repo" }
+}
+
+mainClassName = "science.snelgrove.MainKt"
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile "com.typesafe.akka:akka-actor_2.12:2.5.12"
+    compile "com.typesafe.akka:akka-stream_2.12:2.5.12"
+    compile "com.typesafe.akka:akka-http_2.12:10.1.1"
+    testCompile "com.typesafe.akka:akka-testkit_2.12:2.5.12"
+    testCompile "com.typesafe.akka:akka-stream-testkit_2.12:2.5.12"
+    testCompile "com.typesafe.akka:akka-http-testkit_2.12:10.1.1"
+    testCompile "org.jetbrains.spek:spek-api:1.1.5"
+    testRuntime "org.jetbrains.spek:spek-junit-platform-engine:1.1.5"
+}
